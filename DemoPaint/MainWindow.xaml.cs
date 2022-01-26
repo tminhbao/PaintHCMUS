@@ -147,7 +147,8 @@ namespace DemoPaint
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            string path = @"D:\MyTest.jpg";
+            string relativePath = $"{ AppDomain.CurrentDomain.BaseDirectory}";
+            string path = System.IO.Path.GetFullPath(relativePath) + "\\MyTest.jpg";
             FileStream fs = new FileStream(path, FileMode.Create);
             RenderTargetBitmap bmp = new RenderTargetBitmap((int)canvas.ActualWidth,
                 (int)canvas.ActualHeight, 1 / 96, 1 / 96, PixelFormats.Pbgra32);
