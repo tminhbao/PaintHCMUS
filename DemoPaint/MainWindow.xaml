@@ -7,41 +7,68 @@
         mc:Ignorable="d"
         Title="MyPaint" Height="600" Width="1200" Loaded="Window_Loaded" Name="MyPaint">
     <DockPanel LastChildFill="True">
-        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Height="60" Name="prototypesStackPanel" >
-            <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Height="70" >
+            <StackPanel Orientation="Horizontal" Margin="0,10,10,0">
                 <Button Name="Paste" BorderThickness="0" Background="Transparent" Click="SaveButton_Click">
                     <StackPanel Orientation="Vertical">
                         <Image Name="IconPaste" Source="/Images/paste.png" Height="40" Width="40" RenderOptions.BitmapScalingMode="HighQuality"></Image>
                         <TextBlock Text="Paste" HorizontalAlignment="Center"></TextBlock>
                     </StackPanel>
                 </Button>
+                <StackPanel Orientation="Vertical">
+                    <Button Name="Cut" BorderThickness="0" Background="Transparent" Click="SaveButton_Click">
+                        <StackPanel Orientation="Vertical">
+                            <Image Name="IconCut" Source="/Images/cut.png" Height="28" Width="28" RenderOptions.BitmapScalingMode="HighQuality" Margin="0,5,0,0" ></Image>
+                        </StackPanel>
+                    </Button>
+                    <Button Name="Copy" BorderThickness="0" Background="Transparent" Click="SaveButton_Click">
+                        <StackPanel Orientation="Vertical">
+                            <Image Name="IconCopy" Source="/Images/copy.png" Height="28" Width="28" RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
             </StackPanel>
-            <Button Name="Save" BorderThickness="0" Background="Transparent" Click="SaveButton_Click">
-                <StackPanel Orientation="Vertical">
-                    <Image Name="IconSave" Source="/Images/save.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality" Margin="5,5,5,5"></Image>
-                </StackPanel>
-            </Button>
-            <Button Name="Fill" BorderThickness="0" Background="Transparent" >
-                <StackPanel Orientation="Vertical">
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,10,0">
+                <Button Name="Undo" BorderThickness="0" Background="Transparent" Click="SaveButton_Click">
+                    <Image Name="IconUndo" Source="/Images/undo.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                </Button>
+                <Button Name="Redo" BorderThickness="0" Background="Transparent" Click="SaveButton_Click">
+                    <Image Name="IconRedoi" Source="/Images/redo.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                </Button>
+                <Button Name="Save" BorderThickness="0" Background="Transparent" Click="SaveButton_Click">
+                    <Image Name="IconSave" Source="/Images/save.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality" Margin="5,5,5,5"></Image>
+                </Button>
+            </StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Button Name="Fill" BorderThickness="0" Background="Transparent" Grid.Row="0" Grid.Column="0">
                     <Image Name="IconFill" Source="/Images/fill.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"></Image>
-                </StackPanel>
-            </Button>
-            <Button Name="Pencil" BorderThickness="0" Background="Transparent">
-                <StackPanel Orientation="Vertical">
+                </Button>
+                <Button Name="Pencil" BorderThickness="0" Background="Transparent" Grid.Row="0" Grid.Column="1">
                     <Image Name="IconPencil" Source="/Images/pencil.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"></Image>
-                </StackPanel>
-            </Button>
-            <Button Name="Eraser" BorderThickness="0" Background="Transparent">
-                <StackPanel Orientation="Vertical">
+                </Button>
+                <Button Name="Eraser" BorderThickness="0" Background="Transparent" Grid.Row="0" Grid.Column="2">
                     <Image Name="IconEraser" Source="/Images/eraser.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"></Image>
-                </StackPanel>
-            </Button>
-            <Button Name="Text" BorderThickness="0" Background="Transparent">
-                <StackPanel Orientation="Vertical">
+                </Button>
+                <Button Name="Text" BorderThickness="0" Background="Transparent" Grid.Row="1" Grid.Column="0">
                     <Image Name="IconText" Source="/Images/text.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"></Image>
-                </StackPanel>
-            </Button>
+                </Button>
+            </Grid>
+            <StackPanel Name="prototypesStackPanel" Orientation="Horizontal"></StackPanel>
         </StackPanel>
+
+
+        <Border Background="Black" Width="1200" Height="2"></Border>
+        <!--Màn hình để vẽ-->
         <Grid>
             <Canvas x:Name="canvas" Background="White">
                 <!--<InkCanvas x:Name="inkCanvas" Background="Transparent" Height="464" Width="1200"/>-->
@@ -49,9 +76,7 @@
             <Border Background="Transparent" MouseDown="canvas_MouseDown" 
                 MouseMove="canvas_MouseMove" 
                 MouseUp="canvas_MouseUp">
-
             </Border>
         </Grid>
-
     </DockPanel>
 </Window>
