@@ -18,6 +18,7 @@
     <None Remove="Images\pencil.png" />
     <None Remove="Images\rectangle.png" />
     <None Remove="Images\save.png" />
+    <None Remove="Images\text.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,6 +36,10 @@
     <Resource Include="Images\pencil.png" />
     <Resource Include="Images\rectangle.png" />
     <Resource Include="Images\save.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\text.png" />
   </ItemGroup>
 
 </Project>

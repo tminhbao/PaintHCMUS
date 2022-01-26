@@ -4,9 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DemoPaint"
-
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="840" Loaded="Window_Loaded">
+        Title="MainWindow" Height="600" Width="1200" Loaded="Window_Loaded">
     <DockPanel LastChildFill="True">
         <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Height="120" Name="prototypesStackPanel" >
             <Button Name="ColorPalette" BorderThickness="0" Background="Transparent">
@@ -46,22 +45,10 @@
                     <TextBlock Text="Eraser" Margin="10,10,10,10" FontSize="14"></TextBlock>
                 </StackPanel>
             </Button>
-            <Button Name="Circle" BorderThickness="0" Background="Transparent">
+            <Button Name="Text" BorderThickness="0" Background="Transparent">
                 <StackPanel Orientation="Vertical">
-                    <Image Name="IconCircle" Source="/Images/circle.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality"></Image>
-                    <TextBlock Text="Circle" Margin="10,10,10,10" FontSize="14"></TextBlock>
-                </StackPanel>
-            </Button>
-            <Button Name="Rectangle" BorderThickness="0" Background="Transparent">
-                <StackPanel Orientation="Vertical">
-                    <Image Name="IconRectangle" Source="/Images/rectangle.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality"></Image>
-                    <TextBlock Text="Rectangle" Margin="10,10,10,10" FontSize="14"></TextBlock>
-                </StackPanel>
-            </Button>
-            <Button Name="Line" BorderThickness="0" Background="Transparent">
-                <StackPanel Orientation="Vertical">
-                    <Image Name="IconLine" Source="/Images/line.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality"></Image>
-                    <TextBlock Text="Line" Margin="10,10,10,10" FontSize="14"></TextBlock>
+                    <Image Name="IconText" Source="/Images/text.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                    <TextBlock Text="Text" Margin="10,10,10,10" FontSize="14"></TextBlock>
                 </StackPanel>
             </Button>
         </StackPanel>

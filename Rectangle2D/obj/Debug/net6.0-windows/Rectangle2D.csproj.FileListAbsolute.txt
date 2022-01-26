@@ -12,3 +12,4 @@ D:\GITHUB\PaintHCMUS\Rectangle2D\obj\Debug\net6.0-windows\Rectangle2D.csproj.Cop
 D:\GITHUB\PaintHCMUS\Rectangle2D\obj\Debug\net6.0-windows\Rectangle2D.dll
 D:\GITHUB\PaintHCMUS\Rectangle2D\obj\Debug\net6.0-windows\ref\Rectangle2D.dll
 D:\GITHUB\PaintHCMUS\Rectangle2D\obj\Debug\net6.0-windows\Rectangle2D.pdb
+D:\GITHUB\PaintHCMUS\Rectangle2D\obj\Debug\net6.0-windows\Rectangle2D.csproj.AssemblyReference.cache
