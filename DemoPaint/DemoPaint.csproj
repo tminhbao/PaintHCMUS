@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\circle.png" />
+    <None Remove="Images\color.png" />
+    <None Remove="Images\colorpalette.png" />
+    <None Remove="Images\eraser.png" />
+    <None Remove="Images\fill.png" />
+    <None Remove="Images\line.png" />
+    <None Remove="Images\pencil.png" />
+    <None Remove="Images\rectangle.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contract\Contract.csproj" />
+    <ProjectReference Include="..\Line2D\Line2D.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\circle.png" />
+    <Resource Include="Images\color.png" />
+    <Resource Include="Images\colorpalette.png" />
+    <Resource Include="Images\eraser.png" />
+    <Resource Include="Images\fill.png" />
+    <Resource Include="Images\line.png" />
+    <Resource Include="Images\pencil.png" />
+    <Resource Include="Images\rectangle.png" />
+  </ItemGroup>
+
+</Project>

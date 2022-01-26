@@ -1,0 +1,121 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0-windows7.0": {
+      "Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Contract.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "Line2D/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Contract": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Line2D.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Line2D.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "Contract/1.0.0": {
+      "type": "project",
+      "path": "../Contract/Contract.csproj",
+      "msbuildProject": "../Contract/Contract.csproj"
+    },
+    "Line2D/1.0.0": {
+      "type": "project",
+      "path": "../Line2D/Line2D.csproj",
+      "msbuildProject": "../Line2D/Line2D.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0-windows7.0": [
+      "Contract >= 1.0.0",
+      "Line2D >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\ADmin\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\GITHUB\\PaintHCMUS\\DemoPaint\\DemoPaint.csproj",
+      "projectName": "DemoPaint",
+      "projectPath": "D:\\GITHUB\\PaintHCMUS\\DemoPaint\\DemoPaint.csproj",
+      "packagesPath": "C:\\Users\\ADmin\\.nuget\\packages\\",
+      "outputPath": "D:\\GITHUB\\PaintHCMUS\\DemoPaint\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\ADmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0-windows7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "projectReferences": {
+            "D:\\GITHUB\\PaintHCMUS\\Contract\\Contract.csproj": {
+              "projectPath": "D:\\GITHUB\\PaintHCMUS\\Contract\\Contract.csproj"
+            },
+            "D:\\GITHUB\\PaintHCMUS\\Line2D\\Line2D.csproj": {
+              "projectPath": "D:\\GITHUB\\PaintHCMUS\\Line2D\\Line2D.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

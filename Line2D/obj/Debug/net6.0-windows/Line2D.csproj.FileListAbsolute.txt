@@ -1,0 +1,30 @@
+C:\Users\dev\source\repos\DemoPaint\Line2D\bin\Debug\net6.0-windows\Line2D.deps.json
+C:\Users\dev\source\repos\DemoPaint\Line2D\bin\Debug\net6.0-windows\Line2D.dll
+C:\Users\dev\source\repos\DemoPaint\Line2D\bin\Debug\net6.0-windows\ref\Line2D.dll
+C:\Users\dev\source\repos\DemoPaint\Line2D\bin\Debug\net6.0-windows\Line2D.pdb
+C:\Users\dev\source\repos\DemoPaint\Line2D\bin\Debug\net6.0-windows\Contract.dll
+C:\Users\dev\source\repos\DemoPaint\Line2D\bin\Debug\net6.0-windows\Contract.pdb
+C:\Users\dev\source\repos\DemoPaint\Line2D\obj\Debug\net6.0-windows\Line2D.csproj.AssemblyReference.cache
+C:\Users\dev\source\repos\DemoPaint\Line2D\obj\Debug\net6.0-windows\Line2D.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dev\source\repos\DemoPaint\Line2D\obj\Debug\net6.0-windows\Line2D.AssemblyInfoInputs.cache
+C:\Users\dev\source\repos\DemoPaint\Line2D\obj\Debug\net6.0-windows\Line2D.AssemblyInfo.cs
+C:\Users\dev\source\repos\DemoPaint\Line2D\obj\Debug\net6.0-windows\Line2D.csproj.CoreCompileInputs.cache
+C:\Users\dev\source\repos\DemoPaint\Line2D\obj\Debug\net6.0-windows\Line2D.csproj.CopyComplete
+C:\Users\dev\source\repos\DemoPaint\Line2D\obj\Debug\net6.0-windows\Line2D.dll
+C:\Users\dev\source\repos\DemoPaint\Line2D\obj\Debug\net6.0-windows\ref\Line2D.dll
+C:\Users\dev\source\repos\DemoPaint\Line2D\obj\Debug\net6.0-windows\Line2D.pdb
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Line2D\bin\Debug\net6.0-windows\Line2D.deps.json
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Line2D\bin\Debug\net6.0-windows\Line2D.dll
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Line2D\bin\Debug\net6.0-windows\ref\Line2D.dll
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Line2D\bin\Debug\net6.0-windows\Line2D.pdb
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Line2D\bin\Debug\net6.0-windows\Contract.dll
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Line2D\bin\Debug\net6.0-windows\Contract.pdb
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Line2D\obj\Debug\net6.0-windows\Line2D.csproj.AssemblyReference.cache
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Line2D\obj\Debug\net6.0-windows\Line2D.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Line2D\obj\Debug\net6.0-windows\Line2D.AssemblyInfoInputs.cache
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Line2D\obj\Debug\net6.0-windows\Line2D.AssemblyInfo.cs
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Line2D\obj\Debug\net6.0-windows\Line2D.csproj.CoreCompileInputs.cache
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Line2D\obj\Debug\net6.0-windows\Line2D.csproj.CopyComplete
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Line2D\obj\Debug\net6.0-windows\Line2D.dll
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Line2D\obj\Debug\net6.0-windows\ref\Line2D.dll
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Line2D\obj\Debug\net6.0-windows\Line2D.pdb

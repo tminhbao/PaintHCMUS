@@ -1,0 +1,24 @@
+C:\Users\dev\source\repos\DemoPaint\Contract\bin\Debug\net6.0-windows\Contract.deps.json
+C:\Users\dev\source\repos\DemoPaint\Contract\bin\Debug\net6.0-windows\Contract.dll
+C:\Users\dev\source\repos\DemoPaint\Contract\bin\Debug\net6.0-windows\ref\Contract.dll
+C:\Users\dev\source\repos\DemoPaint\Contract\bin\Debug\net6.0-windows\Contract.pdb
+C:\Users\dev\source\repos\DemoPaint\Contract\obj\Debug\net6.0-windows\Contract.csproj.AssemblyReference.cache
+C:\Users\dev\source\repos\DemoPaint\Contract\obj\Debug\net6.0-windows\Contract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dev\source\repos\DemoPaint\Contract\obj\Debug\net6.0-windows\Contract.AssemblyInfoInputs.cache
+C:\Users\dev\source\repos\DemoPaint\Contract\obj\Debug\net6.0-windows\Contract.AssemblyInfo.cs
+C:\Users\dev\source\repos\DemoPaint\Contract\obj\Debug\net6.0-windows\Contract.csproj.CoreCompileInputs.cache
+C:\Users\dev\source\repos\DemoPaint\Contract\obj\Debug\net6.0-windows\Contract.dll
+C:\Users\dev\source\repos\DemoPaint\Contract\obj\Debug\net6.0-windows\ref\Contract.dll
+C:\Users\dev\source\repos\DemoPaint\Contract\obj\Debug\net6.0-windows\Contract.pdb
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Contract\bin\Debug\net6.0-windows\Contract.deps.json
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Contract\bin\Debug\net6.0-windows\Contract.dll
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Contract\bin\Debug\net6.0-windows\ref\Contract.dll
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Contract\bin\Debug\net6.0-windows\Contract.pdb
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Contract\obj\Debug\net6.0-windows\Contract.csproj.AssemblyReference.cache
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Contract\obj\Debug\net6.0-windows\Contract.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Contract\obj\Debug\net6.0-windows\Contract.AssemblyInfoInputs.cache
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Contract\obj\Debug\net6.0-windows\Contract.AssemblyInfo.cs
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Contract\obj\Debug\net6.0-windows\Contract.csproj.CoreCompileInputs.cache
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Contract\obj\Debug\net6.0-windows\Contract.dll
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Contract\obj\Debug\net6.0-windows\ref\Contract.dll
+D:\Code\Năm 3\Lập trình Windows\DemoPaintDLLTeacher\DemoPaint\Contract\obj\Debug\net6.0-windows\Contract.pdb

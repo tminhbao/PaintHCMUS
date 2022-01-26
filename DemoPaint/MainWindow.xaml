@@ -1,0 +1,73 @@
+﻿<Window x:Class="DemoPaint.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DemoPaint"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="840" Loaded="Window_Loaded">
+    <DockPanel LastChildFill="True">
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Height="120" Name="prototypesStackPanel" >
+            <Button Name="ColorPalette" BorderThickness="0" Background="Transparent">
+                <StackPanel Orientation="Vertical">
+                    <Image Name="IconColorPalette" Source="/Images/colorpalette.png" RenderOptions.BitmapScalingMode="HighQuality" Height="116" Width="367"></Image>
+                </StackPanel>
+            </Button>
+            <Button Name="ColorPicker" BorderThickness="0" Background="White" Width="40" Height="40">
+            </Button>
+            <Button Name="Color" BorderThickness="0" Background="Transparent">
+                <StackPanel Orientation="Vertical">
+                    <Image Name="IconColor" Source="/Images/color.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                    <TextBlock Text="Color" Margin="10,10,10,10" FontSize="14"></TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Name="Fill" BorderThickness="0" Background="Transparent" >
+                <StackPanel Orientation="Vertical">
+                    <Image Name="IconFill" Source="/Images/fill.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                    <TextBlock Text="Fill" Margin="10,10,10,10" FontSize="14"></TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Name="Pencil" BorderThickness="0" Background="Transparent">
+                <StackPanel Orientation="Vertical">
+                    <Image Name="IconPencil" Source="/Images/pencil.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                    <TextBlock Text="Pencil" Margin="10,10,10,10" FontSize="14"></TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Name="Eraser" BorderThickness="0" Background="Transparent">
+                <StackPanel Orientation="Vertical">
+                    <Image Name="IconEraser" Source="/Images/eraser.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                    <TextBlock Text="Eraser" Margin="10,10,10,10" FontSize="14"></TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Name="Circle" BorderThickness="0" Background="Transparent">
+                <StackPanel Orientation="Vertical">
+                    <Image Name="IconCircle" Source="/Images/circle.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                    <TextBlock Text="Circle" Margin="10,10,10,10" FontSize="14"></TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Name="Rectangle" BorderThickness="0" Background="Transparent">
+                <StackPanel Orientation="Vertical">
+                    <Image Name="IconRectangle" Source="/Images/rectangle.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                    <TextBlock Text="Rectangle" Margin="10,10,10,10" FontSize="14"></TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Name="Line" BorderThickness="0" Background="Transparent">
+                <StackPanel Orientation="Vertical">
+                    <Image Name="IconLine" Source="/Images/line.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                    <TextBlock Text="Line" Margin="10,10,10,10" FontSize="14"></TextBlock>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <Grid>
+            <Canvas x:Name="canvas" Background="White">
+
+            </Canvas>
+            <Border Background="Transparent" MouseDown="canvas_MouseDown" 
+                MouseMove="canvas_MouseMove" 
+                MouseUp="canvas_MouseUp">
+                
+            </Border>
+        </Grid>
+        
+    </DockPanel>
+</Window>

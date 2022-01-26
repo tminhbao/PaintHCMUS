@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "DemoPaint/1.0.0": {
+        "dependencies": {
+          "Contract": "1.0.0",
+          "Line2D": "1.0.0"
+        },
+        "runtime": {
+          "DemoPaint.dll": {}
+        }
+      },
+      "Contract/1.0.0": {
+        "runtime": {
+          "Contract.dll": {}
+        }
+      },
+      "Line2D/1.0.0": {
+        "dependencies": {
+          "Contract": "1.0.0"
+        },
+        "runtime": {
+          "Line2D.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DemoPaint/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Contract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Line2D/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
