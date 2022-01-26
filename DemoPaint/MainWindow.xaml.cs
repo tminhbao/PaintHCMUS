@@ -25,9 +25,13 @@ namespace DemoPaint
     /// </summary>
     public partial class MainWindow : Window
     {
+        System.Windows.Ink.DrawingAttributes drawingAttributes;
         public MainWindow()
         {
             InitializeComponent();
+            //drawingAttributes = new System.Windows.Ink.DrawingAttributes();
+            //inkCanvas.DefaultDrawingAttributes = drawingAttributes;
+            //drawingAttributes.Color = Colors.Red;
         }
 
         bool _isDrawing = false;
@@ -138,13 +142,47 @@ namespace DemoPaint
         private void prototypeButton_Click(object sender, RoutedEventArgs e)
         {
             _selectedShapeName = (sender as Button).Tag as string;
-           
             _preview = _prototypes[_selectedShapeName];
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Hello");
+            string path = @"D:\MyTest.jpg";
+            FileStream fs = new FileStream(path, FileMode.Create);
+            RenderTargetBitmap bmp = new RenderTargetBitmap((int)canvas.ActualWidth,
+                (int)canvas.ActualHeight, 1 / 96, 1 / 96, PixelFormats.Pbgra32);
+            bmp.Render(canvas);
+            BitmapEncoder encoder = new TiffBitmapEncoder();
+            encoder.Frames.Add(BitmapFrame.Create(bmp));
+            encoder.Save(fs);
+            fs.Close();
+
+            //string relativePath = $"{ AppDomain.CurrentDomain.BaseDirectory}preset\\";
+            //string path = System.IO.Path.GetFullPath(relativePath);
+            //var saveFileDialog = new Microsoft.Win32.SaveFileDialog();
+            //saveFileDialog.InitialDirectory = path;
+            //saveFileDialog.Filter = "Img (*.txt)|*.txt";
+            //if (saveFileDialog.ShowDialog() == true)
+            //{
+
+            //    FileStream file = new FileStream(saveFileDialog.FileName, FileMode.Create, FileAccess.Write);
+            //    using (StreamWriter streamWriter = new StreamWriter(file))
+            //    {
+            //        try
+            //        {
+
+            //           streamWriter.Close();
+            //        }
+            //        catch (Exception msg)
+            //        {
+            //            System.Windows.MessageBox.Show("" + msg);
+            //        }
+            //        finally
+            //        {
+            //            file.Close();
+            //        }
+            //    }
+            //}
         }
     }
 }

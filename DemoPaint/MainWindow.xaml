@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DemoPaint"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="1200" Loaded="Window_Loaded">
+        Title="MyPaint" Height="600" Width="1200" Loaded="Window_Loaded" Name="MyPaint">
     <DockPanel LastChildFill="True">
         <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Height="120" Name="prototypesStackPanel" >
             <Button Name="ColorPalette" BorderThickness="0" Background="Transparent">
@@ -54,14 +54,14 @@
         </StackPanel>
         <Grid>
             <Canvas x:Name="canvas" Background="White">
-
+                <!--<InkCanvas x:Name="inkCanvas" Background="Transparent" Height="464" Width="1200"/>-->
             </Canvas>
             <Border Background="Transparent" MouseDown="canvas_MouseDown" 
                 MouseMove="canvas_MouseMove" 
                 MouseUp="canvas_MouseUp">
-                
+
             </Border>
         </Grid>
-        
+
     </DockPanel>
 </Window>
