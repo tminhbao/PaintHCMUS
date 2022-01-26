@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DemoPaint"
+
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="840" Loaded="Window_Loaded">
     <DockPanel LastChildFill="True">
@@ -13,7 +14,13 @@
                     <Image Name="IconColorPalette" Source="/Images/colorpalette.png" RenderOptions.BitmapScalingMode="HighQuality" Height="116" Width="367"></Image>
                 </StackPanel>
             </Button>
-            <Button Name="ColorPicker" BorderThickness="0" Background="White" Width="40" Height="40">
+            <Button Name="ColorPicker" BorderThickness="2" Background="White" Width="40" Height="40" >
+            </Button>
+            <Button Name="Save" BorderThickness="0" Background="Transparent" Click="SaveButton_Click">
+                <StackPanel Orientation="Vertical">
+                    <Image Name="IconSave" Source="/Images/save.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                    <TextBlock Text="Save" Margin="10,10,10,10" FontSize="14"></TextBlock>
+                </StackPanel>
             </Button>
             <Button Name="Color" BorderThickness="0" Background="Transparent">
                 <StackPanel Orientation="Vertical">

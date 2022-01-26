@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Contract">
+      <HintPath>..\Contract\bin\Debug\net6.0-windows\Contract.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

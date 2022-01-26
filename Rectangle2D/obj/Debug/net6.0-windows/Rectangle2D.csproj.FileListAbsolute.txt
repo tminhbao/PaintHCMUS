@@ -1,0 +1,14 @@
+D:\GITHUB\PaintHCMUS\Rectangle2D\bin\Debug\net6.0-windows\Rectangle2D.deps.json
+D:\GITHUB\PaintHCMUS\Rectangle2D\bin\Debug\net6.0-windows\Rectangle2D.dll
+D:\GITHUB\PaintHCMUS\Rectangle2D\bin\Debug\net6.0-windows\ref\Rectangle2D.dll
+D:\GITHUB\PaintHCMUS\Rectangle2D\bin\Debug\net6.0-windows\Rectangle2D.pdb
+D:\GITHUB\PaintHCMUS\Rectangle2D\bin\Debug\net6.0-windows\Contract.dll
+D:\GITHUB\PaintHCMUS\Rectangle2D\bin\Debug\net6.0-windows\Contract.pdb
+D:\GITHUB\PaintHCMUS\Rectangle2D\obj\Debug\net6.0-windows\Rectangle2D.GeneratedMSBuildEditorConfig.editorconfig
+D:\GITHUB\PaintHCMUS\Rectangle2D\obj\Debug\net6.0-windows\Rectangle2D.AssemblyInfoInputs.cache
+D:\GITHUB\PaintHCMUS\Rectangle2D\obj\Debug\net6.0-windows\Rectangle2D.AssemblyInfo.cs
+D:\GITHUB\PaintHCMUS\Rectangle2D\obj\Debug\net6.0-windows\Rectangle2D.csproj.CoreCompileInputs.cache
+D:\GITHUB\PaintHCMUS\Rectangle2D\obj\Debug\net6.0-windows\Rectangle2D.csproj.CopyComplete
+D:\GITHUB\PaintHCMUS\Rectangle2D\obj\Debug\net6.0-windows\Rectangle2D.dll
+D:\GITHUB\PaintHCMUS\Rectangle2D\obj\Debug\net6.0-windows\ref\Rectangle2D.dll
+D:\GITHUB\PaintHCMUS\Rectangle2D\obj\Debug\net6.0-windows\Rectangle2D.pdb

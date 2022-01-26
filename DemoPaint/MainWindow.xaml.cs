@@ -36,7 +36,6 @@ namespace DemoPaint
         string _selectedShapeName = "";
         Dictionary<string, IShape> _prototypes = 
             new Dictionary<string, IShape>();
-
         private void canvas_MouseDown(object sender, 
             MouseButtonEventArgs e)
         {
@@ -46,7 +45,6 @@ namespace DemoPaint
 
             _preview.HandleStart(pos.X, pos.Y);
         }
-
         private void canvas_MouseMove(object sender, MouseEventArgs e)
         {
             if (_isDrawing)
@@ -70,7 +68,6 @@ namespace DemoPaint
                 Title = $"{pos.X} {pos.Y}";
             }
         }
-
         private void canvas_MouseUp(object sender, MouseButtonEventArgs e)
         {
             _isDrawing = false;
@@ -92,9 +89,7 @@ namespace DemoPaint
                 var element = shape.Draw();
                 canvas.Children.Add(element);
             }
-
         }
-
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             var exeFolder = AppDomain.CurrentDomain.BaseDirectory;
@@ -122,6 +117,7 @@ namespace DemoPaint
             foreach (var item in _prototypes)
             {
                 var shape = item.Value as IShape;
+
                 var button = new Button()
                 {
                     Content = shape.Name,
@@ -130,6 +126,7 @@ namespace DemoPaint
                     Margin = new Thickness(5, 0, 5, 0),
                     Tag = shape.Name
                 };
+                
                 button.Click += prototypeButton_Click;
                 prototypesStackPanel.Children.Add(button);
             }
@@ -143,6 +140,11 @@ namespace DemoPaint
             _selectedShapeName = (sender as Button).Tag as string;
            
             _preview = _prototypes[_selectedShapeName];
+        }
+
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Hello");
         }
     }
 }
