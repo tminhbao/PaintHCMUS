@@ -7,48 +7,38 @@
         mc:Ignorable="d"
         Title="MyPaint" Height="600" Width="1200" Loaded="Window_Loaded" Name="MyPaint">
     <DockPanel LastChildFill="True">
-        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Height="120" Name="prototypesStackPanel" >
-            <Button Name="ColorPalette" BorderThickness="0" Background="Transparent">
-                <StackPanel Orientation="Vertical">
-                    <Image Name="IconColorPalette" Source="/Images/colorpalette.png" RenderOptions.BitmapScalingMode="HighQuality" Height="116" Width="367"></Image>
-                </StackPanel>
-            </Button>
-            <Button Name="ColorPicker" BorderThickness="2" Background="White" Width="40" Height="40" >
-            </Button>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Height="60" Name="prototypesStackPanel" >
+            <StackPanel Orientation="Horizontal">
+                <Button Name="Paste" BorderThickness="0" Background="Transparent" Click="SaveButton_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Name="IconPaste" Source="/Images/paste.png" Height="40" Width="40" RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                        <TextBlock Text="Paste" HorizontalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
             <Button Name="Save" BorderThickness="0" Background="Transparent" Click="SaveButton_Click">
                 <StackPanel Orientation="Vertical">
-                    <Image Name="IconSave" Source="/Images/save.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality"></Image>
-                    <TextBlock Text="Save" Margin="10,10,10,10" FontSize="14"></TextBlock>
-                </StackPanel>
-            </Button>
-            <Button Name="Color" BorderThickness="0" Background="Transparent">
-                <StackPanel Orientation="Vertical">
-                    <Image Name="IconColor" Source="/Images/color.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality"></Image>
-                    <TextBlock Text="Color" Margin="10,10,10,10" FontSize="14"></TextBlock>
+                    <Image Name="IconSave" Source="/Images/save.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality" Margin="5,5,5,5"></Image>
                 </StackPanel>
             </Button>
             <Button Name="Fill" BorderThickness="0" Background="Transparent" >
                 <StackPanel Orientation="Vertical">
-                    <Image Name="IconFill" Source="/Images/fill.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality"></Image>
-                    <TextBlock Text="Fill" Margin="10,10,10,10" FontSize="14"></TextBlock>
+                    <Image Name="IconFill" Source="/Images/fill.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"></Image>
                 </StackPanel>
             </Button>
             <Button Name="Pencil" BorderThickness="0" Background="Transparent">
                 <StackPanel Orientation="Vertical">
-                    <Image Name="IconPencil" Source="/Images/pencil.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality"></Image>
-                    <TextBlock Text="Pencil" Margin="10,10,10,10" FontSize="14"></TextBlock>
+                    <Image Name="IconPencil" Source="/Images/pencil.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"></Image>
                 </StackPanel>
             </Button>
             <Button Name="Eraser" BorderThickness="0" Background="Transparent">
                 <StackPanel Orientation="Vertical">
-                    <Image Name="IconEraser" Source="/Images/eraser.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality"></Image>
-                    <TextBlock Text="Eraser" Margin="10,10,10,10" FontSize="14"></TextBlock>
+                    <Image Name="IconEraser" Source="/Images/eraser.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"></Image>
                 </StackPanel>
             </Button>
             <Button Name="Text" BorderThickness="0" Background="Transparent">
                 <StackPanel Orientation="Vertical">
-                    <Image Name="IconText" Source="/Images/text.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality"></Image>
-                    <TextBlock Text="Text" Margin="10,10,10,10" FontSize="14"></TextBlock>
+                    <Image Name="IconText" Source="/Images/text.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"></Image>
                 </StackPanel>
             </Button>
         </StackPanel>

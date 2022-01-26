@@ -125,8 +125,8 @@ namespace DemoPaint
                 var button = new Button()
                 {
                     Content = shape.Name,
-                    Width = 80,
-                    Height = 35,
+                    Width = 55,
+                    Height = 30,
                     Margin = new Thickness(5, 0, 5, 0),
                     Tag = shape.Name
                 };

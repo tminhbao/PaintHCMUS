@@ -12,9 +12,12 @@
     <None Remove="Images\circle.png" />
     <None Remove="Images\color.png" />
     <None Remove="Images\colorpalette.png" />
+    <None Remove="Images\copy.png" />
+    <None Remove="Images\cut.png" />
     <None Remove="Images\eraser.png" />
     <None Remove="Images\fill.png" />
     <None Remove="Images\line.png" />
+    <None Remove="Images\paste.png" />
     <None Remove="Images\pencil.png" />
     <None Remove="Images\rectangle.png" />
     <None Remove="Images\save.png" />
@@ -30,9 +33,12 @@
     <Resource Include="Images\circle.png" />
     <Resource Include="Images\color.png" />
     <Resource Include="Images\colorpalette.png" />
+    <Resource Include="Images\copy.png" />
+    <Resource Include="Images\cut.png" />
     <Resource Include="Images\eraser.png" />
     <Resource Include="Images\fill.png" />
     <Resource Include="Images\line.png" />
+    <Resource Include="Images\paste.png" />
     <Resource Include="Images\pencil.png" />
     <Resource Include="Images\rectangle.png" />
     <Resource Include="Images\save.png" />
