@@ -25,9 +25,12 @@ namespace DemoPaint
     /// </summary>
     public partial class MainWindow : Window
     {
+
+
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
         bool _isDrawing = false;
@@ -36,6 +39,7 @@ namespace DemoPaint
         string _selectedShapeName = "";
         Dictionary<string, IShape> _prototypes = 
             new Dictionary<string, IShape>();
+
         private void canvas_MouseDown(object sender, 
             MouseButtonEventArgs e)
         {
@@ -66,6 +70,7 @@ namespace DemoPaint
                 canvas.Children.Add(_preview.Draw());
 
                 Title = $"{pos.X} {pos.Y}";
+                
             }
         }
         private void canvas_MouseUp(object sender, MouseButtonEventArgs e)
@@ -133,6 +138,7 @@ namespace DemoPaint
 
             _selectedShapeName = _prototypes.First().Value.Name;
             _preview = _prototypes[_selectedShapeName].Clone();
+
         }
 
         private void prototypeButton_Click(object sender, RoutedEventArgs e)
@@ -199,6 +205,7 @@ namespace DemoPaint
                 
         }
 
+      
         private void colorBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
