@@ -17,16 +17,15 @@
                 </Button>
                 <StackPanel Orientation="Vertical">
                     <Button Name="Cut" BorderThickness="0" Background="Transparent" Click="SaveButton_Click">
-                        <StackPanel Orientation="Vertical">
-                            <Image Name="IconCut" Source="/Images/cut.png" Height="28" Width="28" RenderOptions.BitmapScalingMode="HighQuality" Margin="0,5,0,0" ></Image>
-                        </StackPanel>
+                        <Image Name="IconCut" Source="/Images/cut.png" Height="28" Width="28" RenderOptions.BitmapScalingMode="HighQuality" Margin="0,5,0,0" ></Image>
                     </Button>
                     <Button Name="Copy" BorderThickness="0" Background="Transparent" Click="SaveButton_Click">
-                        <StackPanel Orientation="Vertical">
-                            <Image Name="IconCopy" Source="/Images/copy.png" Height="28" Width="28" RenderOptions.BitmapScalingMode="HighQuality"></Image>
-                        </StackPanel>
+                        <Image Name="IconCopy" Source="/Images/copy.png" Height="28" Width="28" RenderOptions.BitmapScalingMode="HighQuality"></Image>
                     </Button>
                 </StackPanel>
+                <Button Name="Select" BorderThickness="0" Background="Transparent">
+                    <Image Name="IconSelect" Source="/Images/select.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality" Margin="5,5,5,5"></Image>
+                </Button>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,10,10,0">
@@ -40,6 +39,7 @@
                     <Image Name="IconSave" Source="/Images/save.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality" Margin="5,5,5,5"></Image>
                 </Button>
             </StackPanel>
+            
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition></ColumnDefinition>
@@ -63,11 +63,16 @@
                     <Image Name="IconText" Source="/Images/text.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"></Image>
                 </Button>
             </Grid>
+
+            <Grid x:Name="gridColorPalette">
+                
+            </Grid>
             <StackPanel Name="prototypesStackPanel" Orientation="Horizontal"></StackPanel>
         </StackPanel>
+        
 
 
-        <Border Background="Black" Width="1200" Height="2"></Border>
+        
         <!--Màn hình để vẽ-->
         <Grid>
             <Canvas x:Name="canvas" Background="White">
