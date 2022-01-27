@@ -145,45 +145,34 @@ namespace DemoPaint
             _preview = _prototypes[_selectedShapeName];
         }
 
+        private void SavePic(Canvas canvas, string filename)
+        {
+            RenderTargetBitmap renderBitmap = new RenderTargetBitmap((int)canvas.ActualWidth, (int)canvas.ActualHeight, 96d, 96d, PixelFormats.Pbgra32);
+            canvas.Measure(new Size((int)canvas.ActualWidth, (int)canvas.ActualHeight));
+            canvas.Arrange(new Rect(new Size((int)canvas.ActualWidth, (int)canvas.ActualHeight)));
+
+            renderBitmap.Render(canvas);
+            PngBitmapEncoder encoder = new PngBitmapEncoder();
+            encoder.Frames.Add(BitmapFrame.Create(renderBitmap));
+
+            using (FileStream file = File.Create(filename))
+            {
+                encoder.Save(file);
+            }
+        }
+
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            string relativePath = $"{ AppDomain.CurrentDomain.BaseDirectory}";
-            string path = System.IO.Path.GetFullPath(relativePath) + "\\MyTest.jpg";
-            FileStream fs = new FileStream(path, FileMode.Create);
-            RenderTargetBitmap bmp = new RenderTargetBitmap((int)canvas.ActualWidth,
-                (int)canvas.ActualHeight, 1 / 96, 1 / 96, PixelFormats.Pbgra32);
-            bmp.Render(canvas);
-            BitmapEncoder encoder = new TiffBitmapEncoder();
-            encoder.Frames.Add(BitmapFrame.Create(bmp));
-            encoder.Save(fs);
-            fs.Close();
-
-            //string relativePath = $"{ AppDomain.CurrentDomain.BaseDirectory}preset\\";
-            //string path = System.IO.Path.GetFullPath(relativePath);
-            //var saveFileDialog = new Microsoft.Win32.SaveFileDialog();
-            //saveFileDialog.InitialDirectory = path;
-            //saveFileDialog.Filter = "Img (*.txt)|*.txt";
-            //if (saveFileDialog.ShowDialog() == true)
-            //{
-
-            //    FileStream file = new FileStream(saveFileDialog.FileName, FileMode.Create, FileAccess.Write);
-            //    using (StreamWriter streamWriter = new StreamWriter(file))
-            //    {
-            //        try
-            //        {
-
-            //           streamWriter.Close();
-            //        }
-            //        catch (Exception msg)
-            //        {
-            //            System.Windows.MessageBox.Show("" + msg);
-            //        }
-            //        finally
-            //        {
-            //            file.Close();
-            //        }
-            //    }
-            //}
+            string relativePath = $"{ AppDomain.CurrentDomain.BaseDirectory}preset\\";
+            string path = System.IO.Path.GetFullPath(relativePath);
+            var saveFileDialog = new Microsoft.Win32.SaveFileDialog();
+            saveFileDialog.InitialDirectory = path;
+            saveFileDialog.Filter = "Img (*.jpg)|*.jpg";
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                String fileName = saveFileDialog.FileName;
+                SavePic(canvas, fileName);
+            }
         }
     }
 }
