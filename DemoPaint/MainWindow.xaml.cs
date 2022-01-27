@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 using Line2D;
 using System.IO;
 using System.Reflection;
-
+using Microsoft.Win32;
 
 namespace DemoPaint
 {
@@ -25,13 +25,9 @@ namespace DemoPaint
     /// </summary>
     public partial class MainWindow : Window
     {
-        System.Windows.Ink.DrawingAttributes drawingAttributes;
         public MainWindow()
         {
             InitializeComponent();
-            //drawingAttributes = new System.Windows.Ink.DrawingAttributes();
-            //inkCanvas.DefaultDrawingAttributes = drawingAttributes;
-            //drawingAttributes.Color = Colors.Red;
         }
 
         bool _isDrawing = false;
@@ -145,7 +141,7 @@ namespace DemoPaint
             _preview = _prototypes[_selectedShapeName];
         }
 
-        private void SavePic(Canvas canvas, string filename)
+        private void SaveImage(Canvas canvas, string filename)
         {
             RenderTargetBitmap renderBitmap = new RenderTargetBitmap((int)canvas.ActualWidth, (int)canvas.ActualHeight, 96d, 96d, PixelFormats.Pbgra32);
             canvas.Measure(new Size((int)canvas.ActualWidth, (int)canvas.ActualHeight));
@@ -171,8 +167,41 @@ namespace DemoPaint
             if (saveFileDialog.ShowDialog() == true)
             {
                 String fileName = saveFileDialog.FileName;
-                SavePic(canvas, fileName);
+                SaveImage(canvas, fileName);
             }
+        }
+
+
+        // Thêm hình vào Canvas
+        private void UploadButton_Click(object sender, RoutedEventArgs e)
+        {
+            string relativePath = $"{ AppDomain.CurrentDomain.BaseDirectory}preset\\";
+            string path = System.IO.Path.GetFullPath(relativePath);
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.InitialDirectory = path;
+            openFileDialog.Filter = "Image files (*.jpg)|*.jpg|All Files (*.*)|*.*";
+            openFileDialog.RestoreDirectory = true;
+            if (openFileDialog.ShowDialog() == true)
+            {
+                _preview = null;
+                string filename = openFileDialog.FileName;
+                BitmapImage bitmap = new BitmapImage();
+                bitmap.BeginInit();
+                bitmap.UriSource = new Uri(filename, UriKind.Absolute);
+                bitmap.EndInit();
+
+                Image image = new Image();
+                image.Source = bitmap;
+                image.Width = bitmap.Width;
+                image.Height = bitmap.Height;
+                canvas.Children.Add(image);
+            }
+                
+        }
+
+        private void colorBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
         }
     }
 }

@@ -38,7 +38,7 @@
                 <Button Name="Save" BorderThickness="0" Background="Transparent" Click="SaveButton_Click">
                     <Image Name="IconSave" Source="/Images/save.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality" Margin="5,5,5,5"></Image>
                 </Button>
-                <Button Name="Upload" BorderThickness="0" Background="Transparent" Click="SaveButton_Click">
+                <Button Name="Upload" BorderThickness="0" Background="Transparent" Click="UploadButton_Click">
                     <Image Name="IconUpload" Source="/Images/upload.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality" Margin="5,5,5,5"></Image>
                 </Button>
             </StackPanel>
@@ -62,7 +62,7 @@
                 <Button Name="Eraser" BorderThickness="0" Background="Transparent" Grid.Row="0" Grid.Column="2">
                     <Image Name="IconEraser" Source="/Images/eraser.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"></Image>
                 </Button>
-                <Button Name="Text" BorderThickness="0" Background="Transparent" Grid.Row="1" Grid.Column="0">
+                <Button Name="Text" BorderThickness="0" Background="Transparent" Grid.Row="1" Grid.Column="0" >
                     <Image Name="IconText" Source="/Images/text.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"></Image>
                 </Button>
             </Grid>
@@ -84,9 +84,9 @@
             </ComboBox>
 
             <Label Content="Color:" VerticalAlignment="Center"></Label>
-            <ComboBox x:Name="colorBox" Height="20" Width="70">
+            <ComboBox x:Name="colorBox" Height="20" Width="70" SelectionChanged="colorBox_SelectionChanged">
                 <ComboBoxItem Content="Red" IsSelected="True"></ComboBoxItem>
-                <ComboBoxItem Content="Orange" ></ComboBoxItem>
+                <ComboBoxItem Content="Orange"></ComboBoxItem>
                 <ComboBoxItem Content="Yellow" ></ComboBoxItem>
                 <ComboBoxItem Content="Green" ></ComboBoxItem>
                 <ComboBoxItem Content="Blue" ></ComboBoxItem>
@@ -101,7 +101,7 @@
         <!--Màn hình để vẽ-->
         <Grid>
             <Canvas x:Name="canvas" Background="White">
-                <!--<InkCanvas x:Name="inkCanvas" Background="Transparent" Height="464" Width="1200"/>-->
+                <Image Name="imageView" />
             </Canvas>
             <Border Background="Transparent" MouseDown="canvas_MouseDown" 
                 MouseMove="canvas_MouseMove" 
