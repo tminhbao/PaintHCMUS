@@ -38,6 +38,9 @@
                 <Button Name="Save" BorderThickness="0" Background="Transparent" Click="SaveButton_Click">
                     <Image Name="IconSave" Source="/Images/save.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality" Margin="5,5,5,5"></Image>
                 </Button>
+                <Button Name="Upload" BorderThickness="0" Background="Transparent" Click="SaveButton_Click">
+                    <Image Name="IconUpload" Source="/Images/upload.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality" Margin="5,5,5,5"></Image>
+                </Button>
             </StackPanel>
             
             <Grid>
@@ -75,7 +78,8 @@
 
             <Label Content="Type:" VerticalAlignment="Center"></Label>
             <ComboBox x:Name="typeBox" Height="20" Width="70">
-                <ComboBoxItem Content="Dashed" IsSelected="True"></ComboBoxItem>
+                <ComboBoxItem Content="Normal" IsSelected="True"></ComboBoxItem>
+                <ComboBoxItem Content="Dashed" ></ComboBoxItem>
                 <ComboBoxItem Content="Dotted" ></ComboBoxItem>
             </ComboBox>
 
