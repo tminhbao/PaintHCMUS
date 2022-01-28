@@ -119,6 +119,7 @@ namespace DemoPaint
                 var element = shape.Draw();
                 canvas.Children.Add(element);
             }
+            
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -246,19 +247,19 @@ namespace DemoPaint
             canvas.Children.Clear();
         }
 
-
         private void TextButton_Click(object sender, RoutedEventArgs e)
         {
             string textContent = textInput.Text;
             TextBlock text = new TextBlock()
             {
                 Text = textContent,
-                Width = 50,
-                Height = 50,
+                Width = 100,
+                Height = 100,
                 Background = new SolidColorBrush(Colors.Yellow),
                 FontSize = 20
             };
-            
+
+
             canvas.Children.Add(text);
         }
 

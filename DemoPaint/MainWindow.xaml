@@ -53,17 +53,8 @@
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
-                <Button Name="Fill" BorderThickness="0" Background="Transparent" Grid.Row="0" Grid.Column="0">
-                    <Image Name="IconFill" Source="/Images/fill.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"></Image>
-                </Button>
-                <Button Name="Pencil" BorderThickness="0" Background="Transparent" Grid.Row="0" Grid.Column="1">
-                    <Image Name="IconPencil" Source="/Images/pencil.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"></Image>
-                </Button>
-                <Button Name="Eraser" BorderThickness="0" Background="Transparent" Grid.Row="0" Grid.Column="2">
-                    <Image Name="IconEraser" Source="/Images/eraser.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"></Image>
-                </Button>
-                <Label Content="Nhập text cần thêm" Grid.Row="1" Grid.Column="0"></Label>
-                <TextBox x:Name="textInput" Grid.Row="1" Grid.Column="1"></TextBox>
+                <Label Content="Nhập text cần thêm" Grid.Row="0" Grid.Column="0"></Label>
+                <TextBox x:Name="textInput" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"></TextBox>
                 <Button Name="Text" BorderThickness="0" Background="Transparent" Grid.Row="1" Grid.Column="2" Click="TextButton_Click" >
                     <Image Name="IconText" Source="/Images/text.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"></Image>
                 </Button>
