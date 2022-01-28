@@ -35,7 +35,6 @@
                 <Button Name="Clear" BorderThickness="0" Background="Transparent" Click="ClearButton_Click">
                     <Image Name="IconClear" Source="/Images/clear.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality"></Image>
                 </Button>
-                <CheckBox x:Name="clearCheckbox" Width="50">Clear</CheckBox>
                 <Button Name="Save" BorderThickness="0" Background="Transparent" Click="SaveButton_Click">
                     <Image Name="IconSave" Source="/Images/save.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality" Margin="5,5,5,5"></Image>
                 </Button>
