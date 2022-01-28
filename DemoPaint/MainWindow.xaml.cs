@@ -231,6 +231,12 @@ namespace DemoPaint
         private void UndoButton_Click(object sender, RoutedEventArgs e)
         {
             int count = canvas.Children.Count;
+            int countShape = 0;
+            foreach (var shape in _shapes)
+            {
+                countShape++;
+            }
+            _shapes.RemoveAt(countShape - 1);
             canvas.Children.RemoveAt(count-1);            
         }
 
