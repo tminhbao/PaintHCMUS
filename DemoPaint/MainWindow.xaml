@@ -29,12 +29,13 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,10,10,0">
-                <Button Name="Undo" BorderThickness="0" Background="Transparent" Click="SaveButton_Click">
+                <Button Name="Undo" BorderThickness="0" Background="Transparent" Click="UndoButton_Click">
                     <Image Name="IconUndo" Source="/Images/undo.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality"></Image>
                 </Button>
-                <Button Name="Redo" BorderThickness="0" Background="Transparent" Click="SaveButton_Click">
-                    <Image Name="IconRedoi" Source="/Images/redo.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                <Button Name="Clear" BorderThickness="0" Background="Transparent" Click="ClearButton_Click">
+                    <Image Name="IconClear" Source="/Images/clear.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality"></Image>
                 </Button>
+                <CheckBox x:Name="clearCheckbox" Width="50">Clear</CheckBox>
                 <Button Name="Save" BorderThickness="0" Background="Transparent" Click="SaveButton_Click">
                     <Image Name="IconSave" Source="/Images/save.png" Height="30" Width="30" RenderOptions.BitmapScalingMode="HighQuality" Margin="5,5,5,5"></Image>
                 </Button>
@@ -84,9 +85,9 @@
             </ComboBox>
 
             <Label Content="Color:" VerticalAlignment="Center"></Label>
-            <ComboBox x:Name="colorBox" Height="20" Width="70" SelectionChanged="colorBox_SelectionChanged">
-                
-                <ComboBoxItem Content="Red" IsSelected="True"></ComboBoxItem>
+            <ComboBox x:Name="colorBox" Height="20" Width="70" >
+                <ComboBoxItem Content="Black" IsSelected="True" ></ComboBoxItem>
+                <ComboBoxItem Content="Red" ></ComboBoxItem>
                 <ComboBoxItem Content="Orange"></ComboBoxItem>
                 <ComboBoxItem Content="Yellow" ></ComboBoxItem>
                 <ComboBoxItem Content="Green" ></ComboBoxItem>
@@ -106,7 +107,8 @@
             </Canvas>
             <Border Background="Transparent" MouseDown="canvas_MouseDown" 
                 MouseMove="canvas_MouseMove" 
-                MouseUp="canvas_MouseUp">
+                MouseUp="canvas_MouseUp" 
+                    MouseWheel="canvas_MouseWheel">
             </Border>
         </Grid>
     </DockPanel>

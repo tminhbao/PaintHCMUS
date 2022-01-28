@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <None Remove="Images\circle.png" />
+    <None Remove="Images\clear.png" />
     <None Remove="Images\color.png" />
     <None Remove="Images\colorpalette.png" />
     <None Remove="Images\copy.png" />
@@ -35,6 +36,7 @@
 
   <ItemGroup>
     <Resource Include="Images\circle.png" />
+    <Resource Include="Images\clear.png" />
     <Resource Include="Images\color.png" />
     <Resource Include="Images\colorpalette.png" />
     <Resource Include="Images\copy.png" />

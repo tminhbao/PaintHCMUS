@@ -26,74 +26,106 @@ namespace DemoPaint
     public partial class MainWindow : Window
     {
 
-
+        private Brush brushcolor;
+        private int diameter = 10;
+        private int childcounter = 0;
         public MainWindow()
         {
             InitializeComponent();
+        }
 
+        // Thêm chức năng Zoom
+        private Double zoomMax = 5;
+        private Double zoomMin = 0.5;
+        private Double zoomSpeed = 0.001;
+        private Double zoom = 1;
+        private void canvas_MouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            zoom += zoomSpeed * e.Delta; // Ajust zooming speed (e.Delta = Mouse spin value )
+            if (zoom < zoomMin) { zoom = zoomMin; } // Limit Min Scale
+            if (zoom > zoomMax) { zoom = zoomMax; } // Limit Max Scale
+
+            Point mousePos = e.GetPosition(canvas);
+
+            if (zoom > 1)
+            {
+                canvas.RenderTransform = new ScaleTransform(zoom, zoom, mousePos.X, mousePos.Y); // transform Canvas size from mouse position
+            }
+            else
+            {
+                canvas.RenderTransform = new ScaleTransform(zoom, zoom); // transform Canvas size
+            }
         }
 
         bool _isDrawing = false;
         List<IShape> _shapes = new List<IShape>();
         IShape _preview;
         string _selectedShapeName = "";
-        Dictionary<string, IShape> _prototypes = 
-            new Dictionary<string, IShape>();
+        Dictionary<string, IShape> _prototypes = new Dictionary<string, IShape>();
 
-        private void canvas_MouseDown(object sender, 
-            MouseButtonEventArgs e)
+        private void canvas_MouseDown(object sender, MouseButtonEventArgs e)
         {
             _isDrawing = true;
 
-            Point pos = e.GetPosition(canvas);
+            //Point pos = e.GetPosition(canvas);
 
-            _preview.HandleStart(pos.X, pos.Y);
-        }
+            //_preview.HandleStart(pos.X, pos.Y);
+    }
         private void canvas_MouseMove(object sender, MouseEventArgs e)
         {
+            Ellipse mybrush = new Ellipse();
+            
+            mybrush.Width = diameter;
+            mybrush.Height = diameter;
             if (_isDrawing)
             {
-                Point pos = e.GetPosition(canvas);
-                _preview.HandleEnd(pos.X, pos.Y);
+                //Point pos = e.GetPosition(canvas);
+                //_preview.HandleEnd(pos.X, pos.Y);
 
-                // Xoá hết các hình vẽ cũ
-                canvas.Children.Clear();
+                //// Xoá hết các hình vẽ cũ
+                //canvas.Children.Clear();
 
-                // Vẽ lại các hình trước đó
-                foreach (var shape in _shapes)
-                {
-                    UIElement element = shape.Draw();
-                    canvas.Children.Add(element);
-                }
+                //// Vẽ lại các hình trước đó
+                //foreach (var shape in _shapes)
+                //{
+                //    UIElement element = shape.Draw();
+                //    canvas.Children.Add(element);
+                //}
 
-                // Vẽ hình preview đè lên
-                canvas.Children.Add(_preview.Draw());
+                //// Vẽ hình preview đè lên
+                //canvas.Children.Add(_preview.Draw());
+                Point brushPosition = new Point(e.GetPosition(canvas).X, e.GetPosition(canvas).Y);
+                    mybrush.Fill = new SolidColorBrush(Colors.Bisque);
 
-                Title = $"{pos.X} {pos.Y}";
-                
+                Canvas.SetTop(mybrush, brushPosition.Y);
+                Canvas.SetLeft(mybrush, brushPosition.X);
+                canvas.Children.Add(mybrush);
+                childcounter++;
             }
         }
         private void canvas_MouseUp(object sender, MouseButtonEventArgs e)
         {
             _isDrawing = false;
 
-            // Thêm đối tượng cuối cùng vào mảng quản lí
-            Point pos = e.GetPosition(canvas);
-            _preview.HandleEnd(pos.X, pos.Y);
-            _shapes.Add(_preview);
+            //// Thêm đối tượng cuối cùng vào mảng quản lí
+            //Point pos = e.GetPosition(canvas);
+            //_preview.HandleEnd(pos.X, pos.Y);
+            //_shapes.Add(_preview);
 
-            // Sinh ra đối tượng mẫu kế
-            _preview = _prototypes[_selectedShapeName].Clone();
+            //// Sinh ra đối tượng mẫu kế
+            //_preview = _prototypes[_selectedShapeName].Clone();
 
-            // Ve lai Xoa toan bo
-            canvas.Children.Clear();
+            //// Ve lai Xoa toan bo
+            //canvas.Children.Clear();
 
-            // Ve lai tat ca cac hinh
-            foreach(var shape in _shapes)
-            {
-                var element = shape.Draw();
-                canvas.Children.Add(element);
-            }
+            //// Ve lai tat ca cac hinh
+            //foreach (var shape in _shapes)
+            //{
+            //    var element = shape.Draw();
+            //    canvas.Children.Add(element);
+            //}
+                            
+
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -116,6 +148,7 @@ namespace DemoPaint
                         }
                     }
                 }
+                
             }
 
             // Tạo ra các nút bấm hàng mẫu
@@ -139,6 +172,8 @@ namespace DemoPaint
             _selectedShapeName = _prototypes.First().Value.Name;
             _preview = _prototypes[_selectedShapeName].Clone();
 
+            //string value = colorBox.SelectedValue.ToString();
+
         }
 
         private void prototypeButton_Click(object sender, RoutedEventArgs e)
@@ -146,7 +181,7 @@ namespace DemoPaint
             _selectedShapeName = (sender as Button).Tag as string;
             _preview = _prototypes[_selectedShapeName];
         }
-
+        // Lưu hình
         private void SaveImage(Canvas canvas, string filename)
         {
             RenderTargetBitmap renderBitmap = new RenderTargetBitmap((int)canvas.ActualWidth, (int)canvas.ActualHeight, 96d, 96d, PixelFormats.Pbgra32);
@@ -162,7 +197,6 @@ namespace DemoPaint
                 encoder.Save(file);
             }
         }
-
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             string relativePath = $"{ AppDomain.CurrentDomain.BaseDirectory}preset\\";
@@ -176,8 +210,6 @@ namespace DemoPaint
                 SaveImage(canvas, fileName);
             }
         }
-
-
         // Thêm hình vào Canvas
         private void UploadButton_Click(object sender, RoutedEventArgs e)
         {
@@ -204,11 +236,16 @@ namespace DemoPaint
             }
                 
         }
-
-      
-        private void colorBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        // Chức năng undo
+        private void UndoButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            int count = canvas.Children.Count;
+            canvas.Children.RemoveAt(count-1);            
+        }
+
+        private void ClearButton_Click(object sender, RoutedEventArgs e)
+        {
+            canvas.Children.Clear();
         }
     }
 }
