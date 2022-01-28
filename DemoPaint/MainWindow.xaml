@@ -62,7 +62,9 @@
                 <Button Name="Eraser" BorderThickness="0" Background="Transparent" Grid.Row="0" Grid.Column="2">
                     <Image Name="IconEraser" Source="/Images/eraser.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"></Image>
                 </Button>
-                <Button Name="Text" BorderThickness="0" Background="Transparent" Grid.Row="1" Grid.Column="0" >
+                <Label Content="Nhập text cần thêm" Grid.Row="1" Grid.Column="0"></Label>
+                <TextBox x:Name="textInput" Grid.Row="1" Grid.Column="1"></TextBox>
+                <Button Name="Text" BorderThickness="0" Background="Transparent" Grid.Row="1" Grid.Column="2" Click="TextButton_Click" >
                     <Image Name="IconText" Source="/Images/text.png" Height="20" Width="20" RenderOptions.BitmapScalingMode="HighQuality"></Image>
                 </Button>
             </Grid>

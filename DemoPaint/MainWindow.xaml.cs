@@ -245,5 +245,22 @@ namespace DemoPaint
             _shapes.Clear();
             canvas.Children.Clear();
         }
+
+
+        private void TextButton_Click(object sender, RoutedEventArgs e)
+        {
+            string textContent = textInput.Text;
+            TextBlock text = new TextBlock()
+            {
+                Text = textContent,
+                Width = 50,
+                Height = 50,
+                Background = new SolidColorBrush(Colors.Yellow),
+                FontSize = 20
+            };
+            
+            canvas.Children.Add(text);
+        }
+
     }
 }
