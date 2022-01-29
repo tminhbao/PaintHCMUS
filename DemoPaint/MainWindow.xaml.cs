@@ -85,7 +85,10 @@ namespace DemoPaint
                 if (_isDrawing)
                 {
                     Point brushPosition = new Point(e.GetPosition(canvas).X, e.GetPosition(canvas).Y);
-                    mybrush.Fill = new SolidColorBrush(Color.FromArgb(Convert.ToByte(sliderOp.Value), Convert.ToByte(sliderRed.Value), Convert.ToByte(sliderGreen.Value), Convert.ToByte(sliderBlue.Value)));
+                    if (erasorON.IsChecked == true)
+                        mybrush.Fill = new SolidColorBrush(Colors.White);
+                    else
+                        mybrush.Fill = new SolidColorBrush(Color.FromArgb(Convert.ToByte(sliderOp.Value), Convert.ToByte(sliderRed.Value), Convert.ToByte(sliderGreen.Value), Convert.ToByte(sliderBlue.Value)));
                     Canvas.SetTop(mybrush, brushPosition.Y);
                     Canvas.SetLeft(mybrush, brushPosition.X);
                     canvas.Children.Add(mybrush);
@@ -296,6 +299,21 @@ namespace DemoPaint
                 diameter = Convert.ToInt32(20 + sliderSize.Value);
         }
 
+        private void erasorON_Unchecked(object sender, RoutedEventArgs e)
+        {
+            erasorON.IsChecked = false;
+        }
 
+        private void buttonUndo_Click(object sender, RoutedEventArgs e)
+        {
+            int count = canvas.Children.Count;
+            canvas.Children.RemoveAt(count - 1);
+
+        }
+
+        private void buttonClear_Click(object sender, RoutedEventArgs e)
+        {
+            canvas.Children.Clear();
+        }
     }
 }

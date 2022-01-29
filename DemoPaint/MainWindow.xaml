@@ -116,7 +116,15 @@
                     </StackPanel>
                 </GroupBox>
             </StackPanel>
+            <StackPanel >
+                <CheckBox Unchecked="erasorON_Unchecked" Name="erasorON" Content="check to erase"></CheckBox>
+                <Button Name="buttonUndo" Width="70" HorizontalAlignment="Left" Content="Undo" Click="buttonUndo_Click" ></Button>
+                <Button Name="buttonClear" Width="70" HorizontalAlignment="Left" Content="Clear" Click="buttonClear_Click"></Button>
+            </StackPanel>
         </StackPanel>
+
+
+
 
 
 
