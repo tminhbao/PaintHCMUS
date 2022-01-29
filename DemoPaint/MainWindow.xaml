@@ -60,7 +60,9 @@
                 </Button>
             </Grid>
 
-            <Label Content="Thickness:" VerticalAlignment="Center"></Label>
+            <CheckBox Margin="5,5,5,5" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Name="brushCheckbox">Brush</CheckBox>
+
+            <!--<Label Content="Thickness:" VerticalAlignment="Center"></Label>
             <ComboBox x:Name="thicknessBox" Height="20" Width="40">
                 <ComboBoxItem Content="1" IsSelected="True"></ComboBoxItem>
                 <ComboBoxItem Content="2" ></ComboBoxItem>
@@ -85,13 +87,39 @@
                 <ComboBoxItem Content="Green" ></ComboBoxItem>
                 <ComboBoxItem Content="Blue" ></ComboBoxItem>
                 <ComboBoxItem Content="Purple" ></ComboBoxItem>
-            </ComboBox>
+            </ComboBox>-->
             <StackPanel Name="prototypesStackPanel" Orientation="Horizontal"></StackPanel>
         </StackPanel>
-        
+
+        <StackPanel Background="Azure" DockPanel.Dock="Left" Width="150" Name="stackPanel1" HorizontalAlignment="Left">
+            <GroupBox Header="Color" Name="groupBox1" >
+                <StackPanel>
+                    <Label>Opacity</Label>
+                    <Slider Name="sliderOp" Minimum="0" Maximum="255" >
+                    </Slider>
+                    <Label Content="Red"></Label>
+                    <Slider Name="sliderRed" Minimum="0" Maximum="255" Background="Red" ></Slider>
+                    <Label Content="Green"></Label>
+                    <Slider Name="sliderGreen" Minimum="0" Maximum="255" Background="Green" ></Slider>
+                    <Label Content="Blue"></Label>
+                    <Slider Name="sliderBlue" Minimum="0" Maximum="255" Background="Blue" ></Slider>
+                </StackPanel>
+            </GroupBox>
+            <StackPanel >
+                <GroupBox RadioButton.Checked="SizeGroupBox_Checked" Height="150" Header="Size" Name="SizeGroupBox">
+                    <StackPanel >
+                        <Slider Name="sliderSize" Minimum="1" Maximum="10" Height="30" >
+                        </Slider>
+                        <RadioButton Name="radioSmall" Height="30"  Content="Small"></RadioButton>
+                        <RadioButton Name="radioMedium" Height="30" Content="Medium" />
+                        <RadioButton Name="radioLarge" Height="30" Content="Large" IsChecked="True" />
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+        </StackPanel>
 
 
-        
+
         <!--Màn hình để vẽ-->
         <Grid>
             <Canvas x:Name="canvas" Background="White">

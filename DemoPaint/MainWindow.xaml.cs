@@ -32,6 +32,7 @@ namespace DemoPaint
         public MainWindow()
         {
             InitializeComponent();
+            sliderOp.Value = 255;
         }
 
         // Thêm chức năng Zoom
@@ -65,20 +66,33 @@ namespace DemoPaint
 
         private void canvas_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            _isDrawing = true;
-
-             Point pos = e.GetPosition(canvas);
-
-             _preview.HandleStart(pos.X, pos.Y);
+            if (brushCheckbox.IsChecked == true)
+                _isDrawing = true;
+            else
+            {
+                _isDrawing = true;
+                Point pos = e.GetPosition(canvas);
+                _preview.HandleStart(pos.X, pos.Y);
+            }
         }
         private void canvas_MouseMove(object sender, MouseEventArgs e)
         {
-            Ellipse mybrush = new Ellipse();
-            
-            mybrush.Width = diameter;
-            mybrush.Height = diameter;
-
-            if (_isDrawing)
+            if(brushCheckbox.IsChecked == true)
+            {
+                Ellipse mybrush = new Ellipse();
+                mybrush.Width = diameter;
+                mybrush.Height = diameter;
+                if (_isDrawing)
+                {
+                    Point brushPosition = new Point(e.GetPosition(canvas).X, e.GetPosition(canvas).Y);
+                    mybrush.Fill = new SolidColorBrush(Color.FromArgb(Convert.ToByte(sliderOp.Value), Convert.ToByte(sliderRed.Value), Convert.ToByte(sliderGreen.Value), Convert.ToByte(sliderBlue.Value)));
+                    Canvas.SetTop(mybrush, brushPosition.Y);
+                    Canvas.SetLeft(mybrush, brushPosition.X);
+                    canvas.Children.Add(mybrush);
+                    childcounter++;
+                }
+            }    
+            else if (_isDrawing)
             {
                 Point pos = e.GetPosition(canvas);
                 _preview.HandleEnd(pos.X, pos.Y);
@@ -100,25 +114,34 @@ namespace DemoPaint
         }
         private void canvas_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            _isDrawing = false;
-
-            // Thêm đối tượng cuối cùng vào mảng quản lí
-            Point pos = e.GetPosition(canvas);
-            _preview.HandleEnd(pos.X, pos.Y);
-            _shapes.Add(_preview);
-
-            // Sinh ra đối tượng mẫu kế
-            _preview = _prototypes[_selectedShapeName].Clone();
-
-            // Ve lai Xoa toan bo
-            canvas.Children.Clear();
-
-            // Ve lai tat ca cac hinh
-            foreach (var shape in _shapes)
+            if(brushCheckbox.IsChecked == true)
             {
-                var element = shape.Draw();
-                canvas.Children.Add(element);
+                _isDrawing = false;
             }
+            else
+            {
+                _isDrawing = false;
+                // Thêm đối tượng cuối cùng vào mảng quản lí
+                Point pos = e.GetPosition(canvas);
+                _preview.HandleEnd(pos.X, pos.Y);
+                _shapes.Add(_preview);
+
+                // Sinh ra đối tượng mẫu kế
+                _preview = _prototypes[_selectedShapeName].Clone();
+
+                // Ve lai Xoa toan bo
+                canvas.Children.Clear();
+
+                // Ve lai tat ca cac hinh
+                foreach (var shape in _shapes)
+                {
+                    var element = shape.Draw();
+                    canvas.Children.Add(element);
+                }
+            } 
+                
+
+            
             
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -262,6 +285,17 @@ namespace DemoPaint
 
             canvas.Children.Add(text);
         }
+
+        private void SizeGroupBox_Checked(object sender, RoutedEventArgs e)
+        {
+            if (radioSmall.IsChecked == true)
+                diameter = Convert.ToInt32(2 + sliderSize.Value);
+            if (radioMedium.IsChecked == true)
+                diameter = Convert.ToInt32(10 + sliderSize.Value);
+            if (radioLarge.IsChecked == true)
+                diameter = Convert.ToInt32(20 + sliderSize.Value);
+        }
+
 
     }
 }

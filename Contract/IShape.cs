@@ -6,7 +6,8 @@ namespace Contract
     public interface IShape
     {
         string Name { get; }
-
+        
+        
         void HandleStart(double x, double y);
         void HandleEnd(double x, double y);
 
