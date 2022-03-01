@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "ac486e3f-3b3c-4c18-adf9-0d306f0c2624": {
+      "ProjectGuid": "ac486e3f-3b3c-4c18-adf9-0d306f0c2624",
+      "DisplayName": "Line2D",
+      "ColorIndex": 0
+    },
+    "f5402fed-dca7-4442-9cda-b19dfbbd0bbc": {
+      "ProjectGuid": "f5402fed-dca7-4442-9cda-b19dfbbd0bbc",
+      "DisplayName": "DemoPaint",
+      "ColorIndex": 1
+    },
+    "23c1e998-4adc-407e-85c0-373139d00845": {
+      "ProjectGuid": "23c1e998-4adc-407e-85c0-373139d00845",
+      "DisplayName": "Contract",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
